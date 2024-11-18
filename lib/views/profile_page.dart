@@ -12,11 +12,26 @@ class ProfilePage extends StatefulWidget {
   State<ProfilePage> createState() => _ProfilePageState();
 }
 
-final User? user = Auth().loggedUser;
+// User? user = Auth().loggedUser;
 
 class _ProfilePageState extends State<ProfilePage> {
+  User? user;
+
+  @override
+  void initState() {
+    super.initState();
+    user = FirebaseAuth.instance.currentUser;
+    FirebaseAuth.instance.authStateChanges().listen((User? newUser) {
+      setState(() {
+        user = newUser;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         title: (user?.email != null)
@@ -51,24 +66,28 @@ class _ProfilePageState extends State<ProfilePage> {
                 );
               },
               child: const SizedBox(
-                width: 180,
+                width: 250,
+                height: 60,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.verified),
+                    Icon(
+                      Icons.verified,
+                      size: 40,
+                    ),
                     SizedBox(
                       width: 5,
                     ),
                     Text(
                       "Win Certificate",
-                      style: TextStyle(fontFamily: "Nunito"),
+                      style: TextStyle(fontFamily: "Nunito", fontSize: 25),
                     ),
                   ],
                 ),
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 50,
             ),
             ElevatedButton(
                 onPressed: () async {

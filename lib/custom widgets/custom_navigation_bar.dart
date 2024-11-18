@@ -30,29 +30,35 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     return Scaffold(
         body: pageList[currentTab],
         bottomNavigationBar: BottomAppBar(
-          // height: height * 0.1,
+          height: height * 0.1,
           child: Padding(
-            padding: EdgeInsets.only(top: height * 0.007),
+            padding: EdgeInsets.only(top: height * 0.005),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 buildNavigatingItem(
-                  icon: Icons.verified_outlined,
+                  icon: currentTab == 0
+                      ? Icons.verified
+                      : Icons.verified_outlined,
                   index: 0,
                   text: "Certificate",
                 ),
                 buildNavigatingItem(
-                  icon: Icons.person,
+                  icon: currentTab == 1
+                      ? Icons.person_2
+                      : Icons.person_2_outlined,
                   index: 1,
                   text: "Profile",
                 ),
                 buildNavigatingItem(
-                  icon: Icons.chat,
+                  icon: currentTab == 2 ? Icons.chat : Icons.chat_outlined,
                   index: 2,
                   text: "Chats",
                 ),
                 buildNavigatingItem(
-                  icon: Icons.leaderboard,
+                  icon: currentTab == 3
+                      ? Icons.leaderboard
+                      : Icons.leaderboard_outlined,
                   text: "Score",
                   index: 3,
                 ),

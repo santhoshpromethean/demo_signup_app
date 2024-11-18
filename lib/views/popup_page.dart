@@ -87,7 +87,7 @@ class _QuestionPageState extends State<QuestionPage> {
             SizedBox(height: height * 0.02),
             TextField(
               controller: _answerController,
-              maxLines: 4,
+              maxLines: 8,
               style: TextStyle(fontFamily: "Nunito"),
               enabled: _isInputEnabled,
               decoration: InputDecoration(
@@ -98,7 +98,7 @@ class _QuestionPageState extends State<QuestionPage> {
                 ),
               ),
             ),
-            SizedBox(height: height * 0.01),
+            SizedBox(height: height * 0.03),
             Text(
               "$_timeRemaining seconds remaining.",
               style: const TextStyle(
@@ -111,7 +111,7 @@ class _QuestionPageState extends State<QuestionPage> {
             ElevatedButton(
               onPressed: _isInputEnabled ? null : _submitAnswer,
               child: const Text(
-                "Submit Answer",
+                "Submit",
                 style: TextStyle(fontFamily: "Nunito"),
               ),
             ),

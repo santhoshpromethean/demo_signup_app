@@ -162,7 +162,7 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                       const SizedBox(width: 8),
                       const Text(
-                        "Continue with Google",
+                        "Login with Google",
                         style: TextStyle(fontFamily: "Nunito"),
                       ),
                     ],
