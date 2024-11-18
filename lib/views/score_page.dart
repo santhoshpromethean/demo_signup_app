@@ -15,7 +15,7 @@ class _ScorePageState extends State<ScorePage> {
         centerTitle: true,
         title: const Text(
           "Score",
-          style: TextStyle(fontFamily: "Nunito"),
+          style: TextStyle(fontFamily: "Nunito", fontSize: 18),
         ),
       ),
       body: const Center(

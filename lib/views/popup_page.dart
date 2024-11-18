@@ -68,9 +68,14 @@ class _QuestionPageState extends State<QuestionPage> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back)),
         title: const Text(
           "Win Certificate",
-          style: TextStyle(fontFamily: "Nunito"),
+          style: TextStyle(fontFamily: "Nunito", fontSize: 18),
         ),
         centerTitle: true,
       ),
@@ -109,7 +114,7 @@ class _QuestionPageState extends State<QuestionPage> {
             ),
             SizedBox(height: height * 0.02),
             ElevatedButton(
-              onPressed: _isInputEnabled ? null : _submitAnswer,
+              onPressed: !_isInputEnabled ? _submitAnswer : null,
               child: const Text(
                 "Submit",
                 style: TextStyle(fontFamily: "Nunito"),

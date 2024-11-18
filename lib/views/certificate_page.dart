@@ -15,7 +15,7 @@ class _CertificatePageState extends State<CertificatePage> {
         centerTitle: true,
         title: const Text(
           "Certificate",
-          style: TextStyle(fontFamily: "Nunito"),
+          style: TextStyle(fontFamily: "Nunito", fontSize: 18),
         ),
       ),
       body: const Center(

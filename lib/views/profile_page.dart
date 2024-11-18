@@ -37,11 +37,11 @@ class _ProfilePageState extends State<ProfilePage> {
         title: (user?.email != null)
             ? Text(
                 "User : ${user?.email}",
-                style: TextStyle(fontFamily: "Nunito"),
+                style: TextStyle(fontFamily: "Nunito", fontSize: 18),
               )
             : Text(
                 "User : ${user?.phoneNumber}",
-                style: TextStyle(fontFamily: "Nunito"),
+                style: TextStyle(fontFamily: "Nunito", fontSize: 18),
               ),
         centerTitle: true,
       ),
@@ -80,7 +80,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     Text(
                       "Win Certificate",
-                      style: TextStyle(fontFamily: "Nunito", fontSize: 25),
+                      style: TextStyle(fontFamily: "Nunito", fontSize: 22),
                     ),
                   ],
                 ),

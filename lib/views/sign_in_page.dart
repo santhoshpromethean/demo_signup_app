@@ -77,7 +77,7 @@ class _SignInPageState extends State<SignInPage> {
       appBar: AppBar(
         title: const Text(
           "Sign up",
-          style: TextStyle(fontFamily: "Nunito"),
+          style: TextStyle(fontFamily: "Nunito", fontSize: 18),
         ),
         centerTitle: true,
       ),

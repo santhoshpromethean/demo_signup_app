@@ -15,7 +15,7 @@ class _ChatsPageState extends State<ChatsPage> {
         centerTitle: true,
         title: const Text(
           "Chats",
-          style: TextStyle(fontFamily: "Nunito"),
+          style: TextStyle(fontFamily: "Nunito", fontSize: 18),
         ),
       ),
       body: const Center(
